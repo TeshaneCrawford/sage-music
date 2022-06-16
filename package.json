@@ -1,0 +1,20 @@
+{
+  "name": "creators-showcase-restapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeshaneCrawford/creators-showcase-restapi.git"
+  },
+  "keywords": [],
+  "author": "TeshaneCrawford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeshaneCrawford/creators-showcase-restapi/issues"
+  },
+  "homepage": "https://github.com/TeshaneCrawford/creators-showcase-restapi#readme"
+}
