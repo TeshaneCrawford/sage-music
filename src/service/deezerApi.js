@@ -1,17 +1,15 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const deezerApiHeaders = {
-    'X-RapidAPI-Key': '8e17a3f71cmshf15ad0b33996390p13fffdjsn2c3d0a8585e2',
-    'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+    'X-RapidAPI-Key': process.env.REACT_APP_DEEZER_RAPIDAPI_KEY,
+    'X-RapidAPI-Host': process.env.REACT_APP_DEEZER_RAPIDAPI_HOST,
 }
-
-const baseUrl = 'https://deezerdevs-deezer.p.rapidapi.com';
 
 const createRequest = (url) => ({ url, headers: deezerApiHeaders });
 
 export const deezerApi = createApi({
     reducerPath: 'deezerApi',
-    baseQuery: fetchBaseQuery({ baseUrl }),
+    baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_DEEZER_API_URL }),
     endpoints: (builder) => ({
         getArtist: builder.query({
             query: () => createRequest('/artist/{id}'),
